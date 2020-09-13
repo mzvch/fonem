@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+    {% block head %}
+
+    {% endblock %}
+
+</head>
+<body>
+<h1><a href="{{ url_for('index') }}">[ Fonem ]</a></h1>
+<div class="topnav" id="myTopnav">
+
+    <a href="{{ url_for('index') }}" class="active-index">translator</a>
+    <a href="{{ url_for('opis') }}" class="active-opis">polska fonetyka</a>
+    <a href="{{ url_for('dodaj') }}" class="active-dodaj">doskonal translator</a>
+
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+</div>
+
+{% block body %}
+{% endblock %}
+
+
+
+<footer>
+    &copy; Magdalena Zych
+    a, ą, b, c, ć, d, e, ę, f, g, i, j, k, l, ł, m, n, ń, o, p, q, r, s, ś, t, u, v, x, y, z, ź, ż, ʒ , ǯ, č, ž, š, ᶍ,
+</footer>
+
+
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
+
+</body>
+</html>

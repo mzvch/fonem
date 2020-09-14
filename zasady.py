@@ -32,9 +32,9 @@ def alfabet_fonetyczny(slowo):
     # "sz", "š"
     slowo = slowo.replace("sz", "š")
     # "h", "ᶍ"
-    slowo = slowo.replace("h", "ᶍ")
-    # "ch", "ᶍ"
     slowo = slowo.replace("ch", "ᶍ")
+    # "ch", "ᶍ"
+    slowo = slowo.replace("h", "ᶍ")
     # "ó", "u"
     slowo = slowo.replace("ó", "u")
     # "w", "v"
@@ -271,6 +271,8 @@ def geminata_w_slowie(geminata):
 
 #-----------------------------------------------------------------
 def transkrypca_fonetyczna(slowo):
+
+    slowo=slowo.lower()
 
     if slowo == "godzilla" or slowo == "cito" or slowo == "sinus" or slowo == "nimfa":
         slowo = wyjatek(slowo)

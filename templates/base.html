@@ -20,7 +20,7 @@
 
     <a href="{{ url_for('index') }}" class="active-index">translator</a>
     <a href="{{ url_for('opis') }}" class="active-opis">polska fonetyka</a>
-    <a href="{{ url_for('dodaj') }}" class="active-dodaj">doskonal translator</a>
+    <a href="{{ url_for('zglos') }}" class="active-dodaj">doskonal translator</a>
 
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
@@ -32,10 +32,11 @@
 
 
 
+{% block footer %}
 <footer>
     &copy; Magdalena Zych
-    a, ą, b, c, ć, d, e, ę, f, g, i, j, k, l, ł, m, n, ń, o, p, q, r, s, ś, t, u, v, x, y, z, ź, ż, ʒ , ǯ, č, ž, š, ᶍ,
 </footer>
+{% endblock %}
 
 
 

@@ -2,6 +2,25 @@
 
 {% block head %}
     <style>
+    .opis {
+        margin-bottom: 50px;
+    }
+
+
+    a{
+      color: #102951;
+    }
+
+    .akapit{
+        margin-bottom: 0;
+        margin-top: 50px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .akapit:first-child{
+        margin-top: 80px;
+    }
         .active-opis {
             font-weight: 400;
 
@@ -22,17 +41,23 @@
 
 {% block body %}
     <div class="opis">
+    <div class="akapit">
     <h2>Fonetyka</h2>
-        <p>Fonetyka to nauka zajmująca się <b>wymową wyrazów</b>. Wiele słów wymawiany inaczej niż je zapisujemy, np. <i>bąbelek</i> wymawiamy jako [bombelek] a <i>świt</i> jako [sfit]. Różnica pomiędzy „tym, jak się mówi” a „tym, jak się pisze” występuje w większości języków.</p>
+        <p>Fonetyka to nauka zajmująca się <span class="niebieskie"><b>wymową wyrazów</b></span>. Wiele słów wymawiany inaczej niż je zapisujemy, np. <i>bąbelek</i> wymawiamy jako [bombelek] a <i>świt</i> jako [sfit]. Różnica pomiędzy „tym, jak się mówi” a „tym, jak się pisze” występuje w większości języków.</p>
         <p>Czasem nie jesteśmy świadomi, że niektóre słowa w języku, który słyszymy od dziecka, wymawiamy w inny sposób. Dzieci, które zaczynają uczyć się pisać, popełniają błędy. Często wynikające z tego, że zapisują słowa, tak jak je słyszą. Dlatego <i>kredka</i> mogą zapisać jako „kretka”, <i>król</i> jako „krul”, a <i>pies</i> jako „pjes”.</p>
+    </div>
+            <div class="akapit">
 
 <h2>Transkrypcja fonetyczna</h2>
-<p>Transkrypcja fonetyczna to sposób zapisu wymowy z użyciem <b>alfabetu fonetycznego</b>. Polski alfabet fonetyczny składa się z różnych znaków, odpowiadającym wymawianym głoskom. Niektóre elementu tego alfabetu wyglądają tak samo, jak te w alfabecie ortograficznym, część odpowiada pewnym literom (np. „ó” to [u], „ch” i „h” to [x]), pozostałe są całkowicie inne (np. „cz” to [č], „ł” to [u̯]). Pojawiają się też w nim takie, które przypominają „zwykłe” litery np. ḱ, ḍ, r̦, mʹ.</p>
-        <p>W języku polskim istnieją wyrazy, których zapis ortograficzny wygląda tak samo, jak zapis fonetyczny (np. <i>ptak</i> [ptak]). Niektóre wyglądają, jakby należały do innego, bardzo podobnego do polskiego języka (np. <i>czekolada</i> [čekolada]). Są i takie, które nie przypominają „normalnego” zapisu (np. <i>dziewczyna</i> [ʒ́efčỹna]). </p>
-
+<p>Transkrypcja fonetyczna to sposób zapisu wymowy z użyciem <span class="niebieskie"><b>alfabetu fonetycznego</b></span>. Polski alfabet fonetyczny składa się z różnych znaków, odpowiadającym wymawianym głoskom. Niektóre elementu tego alfabetu wyglądają tak samo, jak te w alfabecie ortograficznym, część odpowiada pewnym literom (np. „ó” to [u], „ch” i „h” to [ᶍ]), pozostałe są całkowicie inne (np. „cz” to [č], „ł” to [u̯]). Pojawiają się też w nim takie, które przypominają „zwykłe” litery np. ḱ, ḍ, r̦, mʹ.</p>
+        <p>W języku polskim istnieją wyrazy, których zapis ortograficzny wygląda tak samo, jak zapis fonetyczny (np. <i>ptak</i>&nbsp [ptak]). Niektóre wyglądają, jakby należały do innego, bardzo podobnego do polskiego języka (np. <i>czekolada</i>&nbsp [čekolada]). Są i takie, które nie przypominają „normalnego” zapisu (np. <i>dziewczyna</i>&nbsp [ʒ́efčỹna]). </p>
+            </div>
+            <div class="akapit">
 <h2>Zasady wymowy</h2>
 <p>Mówiąc językiem ojczystym, raczej nie zastanawiamy się nad zasadami wymowy. Jest ona dla nas intuicyjna — nie myślimy cały czas o tym, aby np. zamieniać końcówki wyrazów na ich bezdźwięczne wersje. We właściwej wymowie „pomagają” nam ograniczenia naszego aparatu mowy — nie jesteśmy w stanie wymówić niektórych połączeń głosek, dlatego odruchowo wymawiamy je w poprawny sposób.</p>
 <p>Oficjalne zasady wymowy odnoszą się do zapisu głosek (np. „rz” i „ż” to [ž], więc drzewo to [ḍževo]), ich prawidłowej wymowy w zależności od sąsiedztwa innych głosek („rz” może być czasem wymawiane jako [š], dlatego przeczytać to [pšečytać]).</p>
-<p>Niektóre słowa, które wypowiada się w specyficzny sposób (głównie wyrazy obcego pochodzenia). Trudno w ich przypadku stworzyć reguły transkrypcji fonetycznej. Jeśli znasz takie słowa, <a href="{{ url_for('dodaj') }}">zgłoś je</a> i przyczyń się do rozwoju Fonema.</p>
-    </div>
+<p>Niektóre słowa, które wypowiada się w specyficzny sposób (głównie wyrazy obcego pochodzenia). Trudno w ich przypadku stworzyć reguły transkrypcji fonetycznej. Jeśli znasz takie słowa, <a href="{{ url_for('zglos') }}">zgłoś je</a> i przyczyń się do rozwoju Fonema.</p>
+            </div>
+            </div>
+
 {% endblock %}

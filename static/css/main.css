@@ -5,6 +5,19 @@ body {
     background-color: #F9F9F7;
 }
 
+footer{
+       magrgin: 0;
+padding: 0 0 20px 20px
+
+}
+
+.niebieskie {
+        color: #102951;
+}
+.status {
+    margin-top: 50px;
+}
+
 h1 {
     font-size: 7vw;
     margin: 10px 0 40px 0;
@@ -45,9 +58,6 @@ h1 a, h1 a:hover {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 23px;
-    #background-color: darkslateblue;
-
-
 }
 
 .topnav a {
@@ -88,41 +98,81 @@ input[type=text] {
     margin-right: 20px;
     margin-bottom: 16px;
     resize: vertical;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 input[type=submit] {
-    background-color: #4CAF50;
+    background-color: #102951;
     color: white;
     padding: 12px 20px;
     border: none;
     cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    letter-spacing: 2px;
+
+
 
 }
 
 input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: #233758;
 }
 
 .container {
     border-radius: 5px;
-    background-color: #f2f2f2;
     padding: 20px;
     text-align: center;
     margin: auto;
     width: 50%;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 .opis{
 
-    margin: 100px;
+    margin-left: 220px;
+    margin-right: 220px;
+    margin-top: 0;
+    margin-bottom: 100px;
 }
 h2 {
         color: #102951;
 
 }
 
+@media screen and (max-width: 1200px) {
+    .opis{
+
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+}
+
+@media screen and (max-width: 800px) {
+    .opis{
+
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+}
+
+
 
 @media screen and (max-width: 600px) {
+    .opis{
+
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
     .topnav a:not(:first-child) {
         display: none;
     }
@@ -149,7 +199,7 @@ h2 {
     .topnav a:hover {
         text-decoration: none;
         background-color: #233758;
-            border-top: 2px solid transparent;
+        border-top: 2px solid transparent;
 
     }
 
@@ -165,6 +215,8 @@ h2 {
         width: 100%;
         margin-left: 0;
         margin-right: 0;
+        font-family: 'Roboto', sans-serif;
+
     }
 
     .container {
@@ -173,6 +225,14 @@ h2 {
 }
 
 @media screen and (max-width: 600px) {
+    .opis{
+
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
     .topnav.responsive {
         position: relative;
         text-align: left;
@@ -210,6 +270,8 @@ h2 {
         width: 100%;
         margin-left: 0;
         margin-right: 0;
+        font-family: 'Roboto', sans-serif;
+
     }
 
     .container.responsive {

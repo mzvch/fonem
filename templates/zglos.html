@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <style>
+
+        footer {
+        margin-top: 80px;
+        }
+
+       @media screen and (max-width: 600px) {
+        footer{
+            margin-top: 50px;
+        }
+
+        }
+
+        .opis {
+            margin-top: 80px;
+            margin-bottom: 30px;
+        }
+
+        .active-dodaj {
+            font-weight: 400;
+        }
+
+        @media screen and (max-width: 600px) {
+            .active-dodaj {
+                font-weight: 500;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .active-dodaj {
+                font-weight: 500;
+            }
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+
+    <div class="opis">
+        <h2>Doskonal Fonem</h2>
+        Niektóre słowa, wypowiada się w specyficzny sposób (głównie wyrazy obcego pochodzenia). Trudno w ich przypadku
+        stworzyć reguły transkrypcji fonetycznej. Jeśli widzisz błąd w transkrypcji fonetycznej — zgłoś to i przyczyń
+        się do rozwoju Fonema.
+    </div>
+
+    <div class="container">
+        <form action="#" method="POST">
+            <input type="text" id="fname" name="slowo" placeholder="wpisz słowo" value="{{ slowo }}">
+
+            <br>
+            <input type="submit" value="&nbsp &nbsp zgłoś &nbsp &nbsp">
+        </form>
+        <div class="status">
+            {% if status %}
+                Słowo <span class="niebieskie"><b>{{ slowko }}</b></span> zostało zgłoszone!
+
+            {% endif %}
+        </div>
+    </div>
+
+
+{% endblock %}

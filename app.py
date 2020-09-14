@@ -14,7 +14,6 @@ def migrate():
 @app.route('/', methods=['POST', 'GET'])
 def index():
     slowo = ""
-
     tlumaczenie = ""
     query = query_db("SELECT * FROM slowko")
     print(query)
@@ -28,6 +27,7 @@ def index():
 
     return render_template('index.html', tlumaczenie=tlumaczenie, slowo=slowo, status=False)
 
+
 @app.route('/opis')
 def opis():
     return render_template('opis.html')
@@ -35,15 +35,10 @@ def opis():
 
 @app.route('/zglos', methods=['GET', 'POST'])
 def zglos():
-
     if request.method == "POST":
         slowko = request.form['slowo']
-
-
         id = len(query_db("SELECT * FROM slowko")) + 1
-
         query_db("INSERT INTO slowko values ({0}, '{1}')".format(id, slowko))
-
         return render_template('zglos.html', status=True, slowko=slowko)
 
     return render_template('zglos.html', status=False)

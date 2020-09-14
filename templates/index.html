@@ -2,28 +2,24 @@
 {% block head %}
     <style>
         footer {
-        margin-top: 200px;
+            margin-top: 180px;
         }
 
         @media screen and (max-width: 1200px) {
             footer {
-        margin-top: 150px;
-
+                margin-top: 150px;
             }
         }
 
         @media screen and (max-width: 800px) {
             footer {
-        margin-top: 100px;
-
+                margin-top: 100px;
             }
         }
 
-
         @media screen and (max-width: 600px) {
             footer {
-        margin-top: 50px;
-
+                margin-top: 50px;
             }
         }
 
@@ -46,13 +42,10 @@
 {% endblock %}
 
 {% block body %}
-
     <div class="container">
         <p class="tytul">&nbsp &nbsp</p>
-
         <form action="#" method="POST">
             <input type="text" id="fname" name="slowo" placeholder="wpisz słowo" value="{{ slowo }}">
-
             <input type="text" id="lname" name="tlumaczenie" placeholder="[ tłumaczenie ]" value="{{ tlumaczenie }}">
             <br>
             <br>
@@ -62,8 +55,6 @@
             {% if status %}
                 <span class="niebieskie"><b>{{ slowo }}</b></span> nie jest słowem lub nie jest pojedynczym słowem.
             {% endif %}
-
         </div>
     </div>
 {% endblock %}
-

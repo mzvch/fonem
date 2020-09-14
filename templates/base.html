@@ -8,38 +8,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-
+    <title>Fonem</title>
     {% block head %}
-
     {% endblock %}
-
 </head>
 <body>
 <h1><a href="{{ url_for('index') }}">[ Fonem ]</a></h1>
 <div class="topnav" id="myTopnav">
-
     <a href="{{ url_for('index') }}" class="active-index">translator</a>
     <a href="{{ url_for('opis') }}" class="active-opis">polska fonetyka</a>
     <a href="{{ url_for('zglos') }}" class="active-dodaj">doskonal translator</a>
-
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
+    <i class="fa fa-bars"></i>
     </a>
 </div>
-
 {% block body %}
 {% endblock %}
-
-
-
 {% block footer %}
-<footer>
-    &copy; Magdalena Zych
-</footer>
+    <footer>
+        &copy; Magdalena Zych
+    </footer>
 {% endblock %}
-
-
-
 <script>
     function myFunction() {
         var x = document.getElementById("myTopnav");
@@ -50,6 +39,5 @@
         }
     }
 </script>
-
 </body>
 </html>

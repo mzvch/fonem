@@ -5,15 +5,15 @@ body {
     background-color: #F9F9F7;
 }
 
-footer{
-       magrgin: 0;
-padding: 0 0 20px 20px
-
+footer {
+    magrgin: 0;
+    padding: 0 0 20px 20px
 }
 
 .niebieskie {
-        color: #102951;
+    color: #102951;
 }
+
 .status {
     margin-top: 50px;
 }
@@ -33,7 +33,6 @@ h1 a, h1 a:hover {
     color: inherit;
 }
 
-
 .topnav {
     overflow: hidden;
     text-align: center;
@@ -47,8 +46,6 @@ h1 a, h1 a:hover {
     -webkit-box-shadow: 0 8px 6px -6px #7F8794;
     -moz-box-shadow: 0 8px 6px -6px #7F8794;
     box-shadow: 0 8px 6px -6px #7F8794;
-
-
 }
 
 .topnav a {
@@ -64,21 +61,16 @@ h1 a, h1 a:hover {
     margin-left: 10px;
     border-top: 2px solid transparent;
     padding-top: 2px;
-    /* daj 0 w media */
 }
 
 .topnav a:first-child {
     margin-left: 0;
 }
 
-
 .topnav a:hover {
     #text-decoration: underline;
     border-top: 2px solid #102951;
-
-    /* usunąc w media i dać inny hover w media navbar kolorowy*/
 }
-
 
 .topnav a.active {
 
@@ -99,7 +91,6 @@ input[type=text] {
     margin-bottom: 16px;
     resize: vertical;
     font-family: 'Roboto', sans-serif;
-
 }
 
 input[type=submit] {
@@ -111,9 +102,6 @@ input[type=submit] {
     font-family: 'Roboto', sans-serif;
     font-weight: lighter;
     letter-spacing: 2px;
-
-
-
 }
 
 input[type=submit]:hover {
@@ -127,51 +115,45 @@ input[type=submit]:hover {
     margin: auto;
     width: 50%;
     font-family: 'Roboto', sans-serif;
-
 }
 
-.opis{
-
+.opis {
     margin-left: 220px;
     margin-right: 220px;
     margin-top: 0;
     margin-bottom: 100px;
 }
-h2 {
-        color: #102951;
 
+h2 {
+    color: #102951;
 }
 
 @media screen and (max-width: 1200px) {
-    .opis{
-
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-top: 0;
-    margin-bottom: 50px;
-}
+    .opis {
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
 }
 
 @media screen and (max-width: 800px) {
-    .opis{
-
-    margin-left: 80px;
-    margin-right: 80px;
-    margin-top: 0;
-    margin-bottom: 50px;
+    .opis {
+        margin-left: 80px;
+        margin-right: 80px;
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
 }
-}
-
-
 
 @media screen and (max-width: 600px) {
-    .opis{
+    .opis {
 
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 0;
-    margin-bottom: 30px;
-}
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
 
     .topnav a:not(:first-child) {
         display: none;
@@ -185,7 +167,6 @@ h2 {
     .topnav {
         text-align: left;
         background-color: #102951;
-
     }
 
     .topnav a {
@@ -193,22 +174,18 @@ h2 {
         padding: 8px 16px;
         margin-left: 0;
         color: #F9F9F7;
-
     }
 
     .topnav a:hover {
         text-decoration: none;
         background-color: #233758;
         border-top: 2px solid transparent;
-
     }
 
     h1 {
         margin-bottom: 20px;
-                    font-size: 10vw;
-        /* albo mniej */
+        font-size: 10vw;
         margin-top: 5px;
-
     }
 
     input[type=text] {
@@ -216,7 +193,6 @@ h2 {
         margin-left: 0;
         margin-right: 0;
         font-family: 'Roboto', sans-serif;
-
     }
 
     .container {
@@ -225,19 +201,18 @@ h2 {
 }
 
 @media screen and (max-width: 600px) {
-    .opis{
+    .opis {
 
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 0;
-    margin-bottom: 30px;
-}
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
 
     .topnav.responsive {
         position: relative;
         text-align: left;
         background-color: #102951;
-
     }
 
     .topnav.responsive .icon {
@@ -254,16 +229,12 @@ h2 {
         padding: 8px 16px;
         margin-left: 0;
         color: #F9F9F7;
-
     }
 
     h1.responsive {
         margin-bottom: 20px;
-            font-size: 10vw;
-                margin-top: 5px;
-
-
-
+        font-size: 10vw;
+        margin-top: 5px;
     }
 
     input[type=text].responsive {
@@ -271,7 +242,6 @@ h2 {
         margin-left: 0;
         margin-right: 0;
         font-family: 'Roboto', sans-serif;
-
     }
 
     .container.responsive {

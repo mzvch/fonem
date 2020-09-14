@@ -1,10 +1,7 @@
-from flask import Flask, render_template, url_for, request
-app = Flask(__name__)
-
-
+from flask import (
+    render_template, request
+)
 from zasady import *
-
-
 from db import *
 
 
@@ -16,39 +13,47 @@ def migrate():
 
 @app.route('/', methods=['POST', 'GET'])
 def index():
-    slowko = ""
-    query = query_db("SELECT * FROM slowko");
+    slowo = ""
+
+    tlumaczenie = ""
+    query = query_db("SELECT * FROM slowko")
     print(query)
 
-    cursor = get_db()
     if request.method == "POST":
-        slowko = request.form['slowko']
-        tlumaczenie = request.form['tlumaczenie']
-        if not litery(slowko):
+        slowo = request.form['slowo']
+        if not litery(slowo):
             return render_template('error.html')
 
-        slowko = transkrypca_fonetyczna(slowko)
+        tlumaczenie = transkrypca_fonetyczna(slowo)
 
-
-    return render_template('index.html', slowko=slowko)
-
+    return render_template('index.html', tlumaczenie=tlumaczenie, slowo=slowo)
 
 @app.route('/opis')
 def opis():
     return render_template('opis.html')
 
 
-@app.route('/dodaj')
+@app.route('/dodaj', methods=['GET', 'POST'])
 def dodaj():
-    return render_template('dodaj.html')
+
+    if request.method == "POST":
+        slowko = request.form['slowo']
+
+        if not litery(slowko):
+            return render_template('error.html')
+
+        id = len(query_db("SELECT * FROM slowko")) + 1
+
+        query_db("INSERT INTO slowko values ({0}, '{1}')".format(id, slowko))
+
+        return render_template('dodaj.html', status=True, slowko=slowko)
+
+    return render_template('dodaj.html', status=False)
 
 
 """if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5019, debug=True)
-
-if __name__ == '__main__':
-    app.run()"""
+"""
 
 if __name__ == '__main__':
     app.run()
-
